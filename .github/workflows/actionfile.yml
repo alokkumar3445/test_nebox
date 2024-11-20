@@ -3,7 +3,10 @@ on: push
 jobs:
     job1:
         runs-on: ubuntu-latest
+
         steps:
+            - name: step0-adding checkout action
+              uses: actions/checkout@v4
             - name: step1-show list of files
               run: ls
             - name: step2-show content in readme file
@@ -13,5 +16,9 @@ jobs:
     job2:
         runs-on: ubuntu-latest
         steps:
+            - name: step1-show list of files
+              run: ls
+            - name: step2-show content in readme file
+              run: cat README.md
             - name: step3-echo your name
               run: echo "Archi Om Gaur"
