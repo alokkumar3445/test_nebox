@@ -1,15 +1,17 @@
-name: Hellow World !!
-
-on:
-  push:
-    branches:
-      - main
-
+name: my first workflow
+on: push
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Say Hello to the World
-        run: echo "Hello, alok!"
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step1-show list of files
+              run: ls
+            - name: step2-show content in readme file
+              run: cat README.md
+            - name: step3-echo your name
+              run: echo "Archi Om Gaur"
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step3-echo your name
+              run: echo "Archi Om Gaur"
